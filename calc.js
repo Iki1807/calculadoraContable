@@ -28,13 +28,19 @@ function agregarOp(op) {
 //Parentesis
 
 document.getElementById("pariz").onclick = () =>{
-  operacion += "(";
-  resultado.textContent = operacion;
+  if (operacion === "" || operacion.endsWith("+") || operacion.endsWith("-") || operacion.endsWith("*") || operacion.endsWith("/") || operacion.endsWith("%")) {
+    
+    operacion += "(";
+    resultado.textContent = operacion;
+  }
 }
 
 document.getElementById("parde").onclick = () =>{
-  operacion += ")";
-  resultado.textContent = operacion;
+  if (operacion !== "" && !operacion.endsWith("+") && !operacion.endsWith("-") && !operacion.endsWith("*") && !operacion.endsWith("/") && !operacion.endsWith("%")) {
+    
+    operacion += ")";
+    resultado.textContent = operacion;
+  }
 }
 
 // Igual
