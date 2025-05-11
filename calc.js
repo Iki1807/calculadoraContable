@@ -16,12 +16,25 @@ document.getElementById("suma").onclick = () => agregarOp("+");
 document.getElementById("resta").onclick = () => agregarOp("-");
 document.getElementById("multiplicar").onclick = () => agregarOp("*");
 document.getElementById("dividir").onclick = () => agregarOp("/");
+document.getElementById("porcentaje").onclick = () => agregarOp("%");
 
 function agregarOp(op) {
-  if (operacion !== "" && !operacion.endsWith("+") && !operacion.endsWith("-") && !operacion.endsWith("*") && !operacion.endsWith("/")) {
+  if (operacion !== "" && !operacion.endsWith("+") && !operacion.endsWith("-") && !operacion.endsWith("*") && !operacion.endsWith("/") && !operacion.endsWith("%")) {
+    
     operacion += op;
     resultado.textContent = operacion;
   }
+}
+//Parentesis
+
+document.getElementById("pariz").onclick = () =>{
+  operacion += "(";
+  resultado.textContent = operacion;
+}
+
+document.getElementById("parde").onclick = () =>{
+  operacion += ")";
+  resultado.textContent = operacion;
 }
 
 // Igual
