@@ -21,11 +21,12 @@ div{
 	grid-auto-rows: 1fr;
 	grid-template-columns: repeat(4, 1fr);
 }
-span{
+#resultado{
 	width: 100%;
 	padding-right: 5px;
 	display: flex;
 	flex-direction: row-reverse;
+	flex-wrap:nowrap;
 	align-items: end;
 	font-family: sans-serif;
 	font-size: 5rem;
@@ -36,7 +37,7 @@ span{
 	grid-row: 1 / 3;
 	grid-column:1 / 5;
 }
-span::-webkit-scrollbar {
+#resultado::-webkit-scrollbar {
 	display: none;
 	background-color: transparent;
 }
@@ -44,6 +45,9 @@ button{
 	background-color: #dfd8c8;
 	border: none;
 	border-radius: 10px;
+	font-size: 1rem;
+	font-weight: 700;
+	font-family: sans-serif;
 	margin: 5px;
 }
 button:hover{
@@ -90,7 +94,3 @@ button:hover{
 	text-align: center;
 }
 
-#historial{
-	width: 100%;
-	max-height: 45%;
-}
